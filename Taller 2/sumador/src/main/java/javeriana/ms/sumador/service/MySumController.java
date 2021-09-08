@@ -30,6 +30,12 @@ public class MySumController {
         return response;
     }
 
+    @GetMapping("/sumaInt")
+    public int integerSum(@RequestParam int a, @RequestParam int b, @RequestParam String user){
+        int result = adder.execute(a, b, user);
+        return result;
+    }
+
     @GetMapping(value="/historial", produces="application/json")
     public List<SumRecord> history(){
         return historyObtainer.execute();
