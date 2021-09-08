@@ -1,4 +1,4 @@
-package javeriana.ms.sumador.service;
+package javeriana.ms.divisor.service;
 
 import java.util.List;
 
@@ -8,30 +8,37 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javeriana.ms.sumador.business.Adder;
-import javeriana.ms.sumador.business.HistoryObtainer;
-import javeriana.ms.sumador.entities.SumRecord;
+import javeriana.ms.divisor.business.Divider;
+import javeriana.ms.divisor.business.HistoryObtainer;
+import javeriana.ms.divisor.entities.DivisionRecord;
 
 @RestController
-public class MySumController {
+public class MyDivisionController {
     
     @Autowired
     Environment environment;
     @Autowired
-    Adder adder;
+    Divider adder;
     @Autowired
     HistoryObtainer historyObtainer;
 
-    @GetMapping("/suma")
+    @GetMapping("/div")
     public String sum(@RequestParam int a, @RequestParam int b, @RequestParam String user){
         String port = environment.getProperty("local.server.port");
-        int result = adder.execute(a, b, user);
-        String response = "Resultado: " + result + " -> Microservicio sumador corriendo en el puerto " + port;
+        float result;
+        String response;
+        try {
+            result = adder.execute(a, b, user);
+            response = "Resultado: " + result + " -> Microservicio divisor corriendo en el puerto " + port;
+        }
+        catch(ArithmeticException e) {
+            response = "Error: División entre cero -> Microservicio divisor corriendo en el puerto " + port;
+        }
         return response;
     }
 
     @GetMapping(value="/historial", produces="application/json")
-    public List<SumRecord> history(){
+    public List<DivisionRecord> history(){
         return historyObtainer.execute();
     }
 

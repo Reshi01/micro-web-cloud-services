@@ -23,10 +23,10 @@ public class MySubstractionController {
     HistoryObtainer historyObtainer;
 
     @GetMapping("/resta")
-    public String sum(@RequestParam int a, @RequestParam int b, @RequestParam String userName){
+    public String sum(@RequestParam int a, @RequestParam int b, @RequestParam String user){
         String port = environment.getProperty("local.server.port");
-        int result = substracter.execute(a, b, userName);
-        String response = "Resultado: " + result + " -> Microservicio sumador corriendo en el puerto " + port;
+        int result = substracter.execute(a, b, user);
+        String response = "Resultado: " + result + " -> Microservicio restador corriendo en el puerto " + port;
         return response;
     }
 
