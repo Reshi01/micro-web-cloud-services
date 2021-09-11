@@ -1,0 +1,16 @@
+<paseos>
+	<paseo>
+		<id>1</id>
+		<name>Paseo1</name>
+		<startLocation>Inicio1</startLocation>
+		<endLocation>Fin1</endLocation>
+		<date>Manana</date>
+	</paseo>
+	<paseo>
+		<id>2</id>
+		<name>Paseo2</name>
+		<startLocation>Inicio2</startLocation>
+		<endLocation>Fin2</endLocation>
+		<date>Manana</date>
+	</paseo>
+</paseos>
