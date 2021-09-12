@@ -1,7 +1,11 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:front_taller_uno/model/paseo.dart';
 import 'package:front_taller_uno/services/api_tours.dart';
 import 'package:front_taller_uno/widgets/paseo_widget.dart';
+
+import 'creation_screen.dart';
 
 class Paseos extends StatefulWidget {
   @override
@@ -70,5 +74,10 @@ class _PaseosState extends State<Paseos> {
     );
   }
 
-  void _addTour() {}
+  
+
+  void _addTour() {
+     Route route = MaterialPageRoute(builder: (context) => Creation_screen());
+    Navigator.push(context, route).then((value) => setState(() {}));
+  }
 }
