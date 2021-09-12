@@ -17,11 +17,9 @@ public class Paseos {
 	private List<Paseo> paseos=null;
 
 	public Paseos() {
-		super();
 	}
 
 	public Paseos(List<Paseo> paseos) {
-		super();
 		this.paseos = paseos;
 	}
 
