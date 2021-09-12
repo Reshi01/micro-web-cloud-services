@@ -6,6 +6,13 @@ Integrantes: Santiago Caroprese, Daniel Hernández, Juan Carlos Suárez
 ### Parte 1 - REST
 
 #### Parte 1 - Bono usando flutter
+
+**Servidor**
+1. **Iniciar Editor de Código**: Se puede confirmar que el servidor funciona tanto en Eclipse como en NetBeans, pero durante las pruebas resultó que no siempre funciona en Visual Studio Code.
+2. **Iniciar aplicación**: Dentro del editor seleccionado, abrir el archivo "Taller 1/jerseyServer". Luego, iniciar la ejecución del programa, con archivo principal "/Taller 1/jerseyServer/src/main/java/co/edu/javeriana/ws/rest/Main.java".
+3. **Base de Datos**: El servidor utiliza un archivo xml como base de datos con la información necesaria para la ejecución: "/Taller 1/jerseyServer/paseos.xml".
+
+**Cliente**
 1. **Instalar flutter:** Acceda al siguiente enlace https://flutter.dev/docs/get-started/install y siga los pasos para instalar flutter en su equipo.
 2. **Instalar dependencias:** Abra el directorio "Taller 1/front_taller_uno" en Visual Studio Code. Luego, abra la terminal y escriba "flutter pub get".
 3. **Instalar android studio:** Acceda al siguiente enlace https://developer.android.com/studio para descargar e instalar Android studio.
