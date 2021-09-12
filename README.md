@@ -1,4 +1,5 @@
 # Taller 2 - Rest Microservicios
+Integrantes: Santiago Caroprese, Daniel Hernández, Juan Carlos Suárez
 
 ## Instrucciones
 
