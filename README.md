@@ -5,6 +5,14 @@ Integrantes: Santiago Caroprese, Daniel Hernández, Juan Carlos Suárez
 
 ### Parte 1 - REST
 
+## Parte 1 - Bono usnado flutter
+1. **Instalar flutter:** Acceda al siguiente enlace https://flutter.dev/docs/get-started/install y siga los pasos para instalar flutter en su equipo.
+2. **Instalar dependencias:** Abra el directorio "Taller 1/front_taller_uno" en Visual Studio Code. Luego, abra la terminal y escriba "flutter pub get".
+3. **Instalar emulador de android:** Acceda al siguiente enlace https://developer.android.com/studio para descargar e instalar Android studio.
+4. **Iniciar emulador de android:** Acceda al siguiente enlace https://developer.android.com/studio/run/emulator#runningemulator y siga las instrucciones para ejecutar el emulador de android.
+5. **Iniciar aplicación:** Abra el archivo "Taller 1/front_taller_uno/lib/main.dart" desde Visual Studio Code. Luego en el menú superior izquierdo seleccione "run" y "Start debuggin"
+6. **Usar servicios:** Ahora ya puede usar la aplicación.
+
 ### Parte 2 - Spring Cloud
 1. **Configurar base de datos:** Inicie una instancia de MongoDB en localhost:27017.
 2. **Iniciar Servidor Eureka:** Abra el directorio "Taller 2"/eurekaserver en Visual Studio Code. Luego, abra la terminal y escriba los comandos "mvn clean install" y "mvn spring-boot:run".
