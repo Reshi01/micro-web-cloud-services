@@ -50,7 +50,7 @@ public class CalculadoraController {
 
   @GetMapping(value="/historial",produces="application/json")
   public List<Record> historial(){
-    List<Record> result= new ArrayList();
+    List<Record> result= new ArrayList<>();
     List<Record> sumRecords = restTemplate.getForObject("http://sumador/historial", List.class);
     result.addAll(sumRecords);
     List<Record> substractionRecords =restTemplate.getForObject("http://restador/historial", List.class);
