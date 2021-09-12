@@ -1,9 +1,6 @@
 package co.edu.javeriana.ws.rest;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -21,11 +18,7 @@ public class Repository {
 		    JAXBContext jaxbContext = JAXBContext.newInstance(Paseos.class);
 		    Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		    Paseos paseos = (Paseos) jaxbUnmarshaller.unmarshal(file);
-		    System.out.println("Lectura: ");
-		    for (Paseo paseo : paseos.getPaseos()) {
-				System.out.println(paseo.getId());
-				System.out.println(paseo.getName());
-			}
+		    System.out.println("Lectura");
 		    return paseos.getPaseos();
 		} catch (JAXBException ex) {
 		    ex.printStackTrace();
@@ -41,7 +34,7 @@ public class Repository {
 			}
 		}
 		paseos.add(paseo);
-		save(paseos);	
+		save(new Paseos(paseos));	
 		return true;
 	}
 	
@@ -68,7 +61,7 @@ public class Repository {
 				paseo.setEndLocation(endLocation);
 			}
 		}
-		save(paseos);
+		save(new Paseos(paseos));
 		return paseo;
 	}
 	
@@ -80,20 +73,20 @@ public class Repository {
 		for (Paseo p : paseos) {
 			if(p.getId().equals(id)){
 				paseos.remove(p);
+				save(new Paseos(paseos));
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private void save(List<Paseo> paseos) {
+	private void save(Paseos paseos) {
 		try {
 			File file = new File("paseos.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Paseos.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-			System.out.println("Escritura: ");
-			jaxbMarshaller.marshal(paseos, System.out);
+			System.out.println("Escritura");
 			jaxbMarshaller.marshal(paseos, file);
 		} catch (JAXBException ex) {
 		    ex.printStackTrace();

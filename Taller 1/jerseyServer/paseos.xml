@@ -1,16 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <paseos>
-	<paseo>
-		<id>1</id>
-		<name>Paseo1</name>
-		<startLocation>Inicio1</startLocation>
-		<endLocation>Fin1</endLocation>
-		<date>Manana</date>
-	</paseo>
-	<paseo>
-		<id>2</id>
-		<name>Paseo2</name>
-		<startLocation>Inicio2</startLocation>
-		<endLocation>Fin2</endLocation>
-		<date>Manana</date>
-	</paseo>
+    <paseo>
+        <id>1</id>
+        <name>SUESCA</name>
+        <startLocation>Unicentro, Bogotá, Colombia</startLocation>
+        <endLocation>Suesca, Cundinamarca</endLocation>
+        <date>18.09.2021 8:00 - 18.09.2021 19:00</date>
+    </paseo>
+    <paseo>
+        <id>2</id>
+        <name>LA VEGA</name>
+        <startLocation>Centro Comercial Plaza 80, Bogotá, Colombia</startLocation>
+        <endLocation>Fin2</endLocation>
+        <date>19.09.2021 8:00 - 19.09.2021 19:00</date>
+    </paseo>
+    <paseo>
+        <id>3</id>
+        <name>MONGUÍ</name>
+        <startLocation>Unicentro, Bogotá, Colombia</startLocation>
+        <endLocation>Monguí, Boyacá</endLocation>
+        <date>26.09.2021 7:00 - 26.09.2021 20:00</date>
+    </paseo>
+    <paseo>
+        <id>4</id>
+        <name>CHOACHÍ</name>
+        <startLocation>Unicentro, Bogotá, Colombia</startLocation>
+        <endLocation>Choachí, Cundinamarca</endLocation>
+        <date>25.09.2021 8:00 - 25.09.2021 19:00</date>
+    </paseo>
+		<paseo>
+				<id>5</id>
+				<name>DESIERTO DE LA TATACOA</name>
+				<startLocation>Centro Comercial Santa Fé, Bogotá, Colombia</startLocation>
+				<endLocation>Desierto de la tatacoa, La Guajira</endLocation>
+				<date>17.09.2021 20:00 - 20.09.2021 16:00</date>
+		</paseo>
+    <paseo>
+        <id>6</id>
+        <name>JARDÍN</name>
+        <startLocation>Centro Comercial Plaza 80, Bogotá, Colombia</startLocation>
+        <endLocation>Jardín, Antioquia</endLocation>
+        <date>18.09.2021 8:00 - 18.09.2021 22:00</date>
+    </paseo>
+    <paseo>
+        <id>7</id>
+        <name>GUATAPÉ</name>
+        <startLocation>Centro Comercial Plaza 80, Bogotá, Colombia</startLocation>
+        <endLocation>Guatapé, Antioquia</endLocation>
+        <date>25.09.2021 8:00 - 25.09.2021 22:00</date>
+    </paseo>
 </paseos>
