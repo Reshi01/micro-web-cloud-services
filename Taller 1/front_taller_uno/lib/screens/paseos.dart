@@ -27,7 +27,7 @@ class _PaseosState extends State<Paseos> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tutorías asignadas"),
+        title: Text("Paseos disponibles"),
       ),
       body: Container(
           child: FutureBuilder<List<Paseo>>(
@@ -48,11 +48,13 @@ class _PaseosState extends State<Paseos> {
                           onDismissed: (direction) {
                             // Remove the item from the data source.
                             setState(() {
+                              borrar(paseo.id);
                               snapshot.data!.removeAt(index);
+                              
                             });
                             // Then show a snackbar.
                             ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('dismissed')));
+                                SnackBar(content: Text('Paseo eliminado')));
                           },
                           child: Center(
                             child: Padding(
@@ -78,6 +80,12 @@ class _PaseosState extends State<Paseos> {
 
   void _addTour() {
      Route route = MaterialPageRoute(builder: (context) => Creation_screen());
-    Navigator.push(context, route).then((value) => setState(() {}));
+    Navigator.push(context, route).then((_) => setState(() {
+      futureTutorships = Api_tours().getPaseos();
+    }));
+  }
+
+  void borrar(String id) {
+    Api_tours().deletePaseo(id);
   }
 }

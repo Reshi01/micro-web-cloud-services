@@ -94,7 +94,6 @@ class Paseo_widget extends StatelessWidget {
                           // the form is invalid.
                           if (_formKey.currentState!.validate()) {
                             actualizar(paseo.id);
-                            Navigator.pop(context);
                           }
                         },
                       )),

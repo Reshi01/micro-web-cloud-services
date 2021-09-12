@@ -1,4 +1,6 @@
 // Create a Form widget.
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:front_taller_uno/services/api_tours.dart';
 
@@ -38,6 +40,13 @@ class Creation_screenState extends State<Creation_screen> {
                   hintText: 'Nombre',
                   labelText: 'Nombre',
                 ),
+                validator: (String? value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Ingresa un nombre';
+                  }
+                  _name = value;
+                  return null;
+                },
               ),
               TextFormField(
                 decoration: const InputDecoration(
@@ -126,8 +135,24 @@ class Creation_screenState extends State<Creation_screen> {
       });
   }
 
-  void crear() {
-    Api_tours().postPaseo(_name, selectedDate.toString(), _inicio, _fin);
-    //Navigator.pop(context);
+ 
+
+  Future<void> crear() async {
+    var res = false;
+    res = await Api_tours().postPaseo(_name, selectedDate.toString(), _inicio, _fin);
+    print(res);
+    if(res){
+      await volver();
+    }
+    /*Future.delayed(const Duration(milliseconds: 2000), () {
+      setState(() {
+        // Here you can write your code for open new view
+        Navigator.pop(context);
+      });
+    });*/
+  }
+
+  Future<void> volver() async{
+    Navigator.pop(context);
   }
 }

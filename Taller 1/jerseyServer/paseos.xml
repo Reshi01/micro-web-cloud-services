@@ -8,33 +8,12 @@
         <date>18.09.2021 8:00 - 18.09.2021 19:00</date>
     </paseo>
     <paseo>
-        <id>2</id>
-        <name>LA VEGA</name>
-        <startLocation>Centro Comercial Plaza 80, Bogotá, Colombia</startLocation>
-        <endLocation>Fin2</endLocation>
-        <date>19.09.2021 8:00 - 19.09.2021 19:00</date>
-    </paseo>
-    <paseo>
         <id>3</id>
         <name>MONGUÍ</name>
         <startLocation>Unicentro, Bogotá, Colombia</startLocation>
-        <endLocation>Monguí, Boyacá</endLocation>
+        <endLocation>MonguÃ­, BoyacÃ¡</endLocation>
         <date>26.09.2021 7:00 - 26.09.2021 20:00</date>
     </paseo>
-    <paseo>
-        <id>4</id>
-        <name>CHOACHÍ</name>
-        <startLocation>Unicentro, Bogotá, Colombia</startLocation>
-        <endLocation>Choachí, Cundinamarca</endLocation>
-        <date>25.09.2021 8:00 - 25.09.2021 19:00</date>
-    </paseo>
-		<paseo>
-				<id>5</id>
-				<name>DESIERTO DE LA TATACOA</name>
-				<startLocation>Centro Comercial Santa Fé, Bogotá, Colombia</startLocation>
-				<endLocation>Desierto de la tatacoa, La Guajira</endLocation>
-				<date>17.09.2021 20:00 - 20.09.2021 16:00</date>
-		</paseo>
     <paseo>
         <id>6</id>
         <name>JARDÍN</name>
@@ -45,8 +24,29 @@
     <paseo>
         <id>7</id>
         <name>GUATAPÉ</name>
-        <startLocation>Centro Comercial Plaza 80, Bogotá, Colombia</startLocation>
-        <endLocation>Guatapé, Antioquia</endLocation>
+        <startLocation>Centro Comercial Gran estacion, BogotÃ¡, Colombia</startLocation>
+        <endLocation>Guatape, Antioquia</endLocation>
         <date>25.09.2021 8:00 - 25.09.2021 22:00</date>
+    </paseo>
+    <paseo>
+        <id>4069d740-13fb-11ec-bdbd-1b6df6d61394</id>
+        <name>Paseo a buga</name>
+        <startLocation>Centro comercial chipichape</startLocation>
+        <endLocation>Buga</endLocation>
+        <date>2021-09-30 00:00:00.000</date>
+    </paseo>
+    <paseo>
+        <id>8a616340-13fb-11ec-bdbd-1b6df6d61394</id>
+        <name>Viaje a villa topo</name>
+        <startLocation>Calle 170 #22, Bogota</startLocation>
+        <endLocation>Villa topo, Cundinamarca</endLocation>
+        <date>2021-09-21 00:00:00.000</date>
+    </paseo>
+    <paseo>
+        <id>e99ef2f0-13fb-11ec-bdbd-1b6df6d61394</id>
+        <name>Paseo al lago</name>
+        <startLocation>Centro comercial chipichape</startLocation>
+        <endLocation>Lago calima, casa 3</endLocation>
+        <date>2021-09-28 00:00:00.000</date>
     </paseo>
 </paseos>
