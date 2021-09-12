@@ -34,7 +34,7 @@ public class Repository {
 			}
 		}
 		paseos.add(paseo);
-		save(paseos);	
+		save(new Paseos(paseos));	
 		return true;
 	}
 	
@@ -61,7 +61,7 @@ public class Repository {
 				paseo.setEndLocation(endLocation);
 			}
 		}
-		save(paseos);
+		save(new Paseos(paseos));
 		return paseo;
 	}
 	
@@ -73,21 +73,20 @@ public class Repository {
 		for (Paseo p : paseos) {
 			if(p.getId().equals(id)){
 				paseos.remove(p);
-				save(paseos);
+				save(new Paseos(paseos));
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private void save(List<Paseo> paseos) {
+	private void save(Paseos paseos) {
 		try {
 			File file = new File("paseos.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Paseos.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			System.out.println("Escritura");
-			jaxbMarshaller.marshal(paseos, System.out);
 			jaxbMarshaller.marshal(paseos, file);
 		} catch (JAXBException ex) {
 		    ex.printStackTrace();

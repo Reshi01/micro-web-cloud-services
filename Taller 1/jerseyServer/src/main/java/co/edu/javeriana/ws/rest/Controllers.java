@@ -22,9 +22,9 @@ public class Controllers {
     @GET
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public List<Paseo> getAllPaseos() {
-		Repository repository= new Repository();
+			Repository repository= new Repository();
     	List<Paseo> paseos=repository.getAllPaseo();
-        return paseos;
+			return paseos;
     }
 	
 	@Path("add")
@@ -32,11 +32,11 @@ public class Controllers {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public HttpStatus addPaseo(Paseo paseo) {
-		Repository repository= new Repository();
-		if(repository.addPaseo(paseo)) {
-			return HttpStatus.CREATED_201;
-		}
-		return HttpStatus.CONFLICT_409;
+			Repository repository= new Repository();
+			if(repository.addPaseo(paseo)) {
+				return HttpStatus.CREATED_201;
+			}
+			return HttpStatus.CONFLICT_409;
     }
 	
 	@Path("modify")
@@ -46,12 +46,12 @@ public class Controllers {
     		@QueryParam("name") String name,
     		@QueryParam("startLocation") String startLocation,
     		@QueryParam("endLocation") String endLocation) {
-		Repository repository= new Repository();
-		Paseo paseo=repository.modifyPaseo(id, name, startLocation, endLocation);
-		if(paseo!=null) {
-			return paseo;
-		}
-		return null;
+			Repository repository= new Repository();
+			Paseo paseo=repository.modifyPaseo(id, name, startLocation, endLocation);
+			if(paseo!=null) {
+				return paseo;
+			}
+			return null;
     }
     
     @Path("delete")
