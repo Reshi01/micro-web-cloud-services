@@ -2,7 +2,6 @@ package javeriana.ms.calculadora;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -48,7 +47,7 @@ public class CalculadoraController {
     return response;
   }
 
-  @GetMapping(value="/historial",produces="application/json")
+  @GetMapping(value="/calculadora/historial",produces="application/json")
   public List<Record> historial(){
     List<Record> result= new ArrayList<>();
     List<Record> sumRecords = restTemplate.getForObject("http://sumador/historial", List.class);
