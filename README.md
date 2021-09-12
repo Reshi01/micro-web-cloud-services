@@ -9,7 +9,7 @@ Integrantes: Santiago Caroprese, Daniel Hernández, Juan Carlos Suárez
 
 **Servidor**
 1. **Iniciar Editor de Código**: Se puede confirmar que el servidor funciona tanto en Eclipse como en NetBeans, pero durante las pruebas resultó que no siempre funciona en Visual Studio Code.
-2. **Iniciar aplicación**: Dentro del editor seleccionado, abrir el archivo "Taller 1/jerseyServer". Luego, iniciar la ejecución del programa, con archivo principal "/Taller 1/jerseyServer/src/main/java/co/edu/javeriana/ws/rest/Main.java".
+2. **Iniciar aplicación**: Dentro del editor seleccionado, abrir el directorio "Taller 1/jerseyServer". Luego, iniciar la ejecución del programa, con archivo principal "/Taller 1/jerseyServer/src/main/java/co/edu/javeriana/ws/rest/Main.java".
 3. **Base de Datos**: El servidor utiliza un archivo xml como base de datos con la información necesaria para la ejecución: "/Taller 1/jerseyServer/paseos.xml".
 
 **Cliente**
